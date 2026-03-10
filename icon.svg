@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <rect width="128" height="128" rx="22" fill="#111827"/>
+  <g shape-rendering="crispEdges">
+    <rect x="28" y="38" width="72" height="52" fill="#F59E0B"/>
+    <rect x="36" y="46" width="56" height="36" fill="#111827" opacity="0.18"/>
+    <rect x="40" y="52" width="16" height="12" fill="#34D399"/>
+    <rect x="60" y="52" width="28" height="12" fill="#60A5FA"/>
+    <rect x="40" y="68" width="48" height="10" fill="#F472B6"/>
+  </g>
+  <text x="64" y="112" text-anchor="middle" font-family="monospace" font-size="12" fill="#E5E7EB">TFS</text>
+</svg>
+
