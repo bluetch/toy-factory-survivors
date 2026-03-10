@@ -2,10 +2,10 @@ extends Node2D
 
 signal back_to_menu
 
-@onready var player: CharacterBody2D = %Player
-@onready var enemy_manager: Node = %EnemyManager
-@onready var camera: Camera2D = %Camera2D
-@onready var hud: CanvasItem = %HUD
+@onready var player: CharacterBody2D = $World/Player
+@onready var enemy_manager: Node = $World/EnemyManager
+@onready var camera: Camera2D = $World/Camera2D
+@onready var hud: CanvasItem = $HUD
 
 func _ready() -> void:
 	camera.position = player.position

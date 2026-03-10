@@ -4,19 +4,23 @@ signal request_resume
 signal request_back_to_menu
 signal upgrade_chosen(upgrade_id: String)
 
-@onready var hp_bar: ProgressBar = %HPBar
-@onready var xp_bar: ProgressBar = %XPBar
-@onready var level_label: Label = %LevelLabel
+@onready var hp_bar: ProgressBar = $Root/TopLeft/HPBar
+@onready var xp_bar: ProgressBar = $Root/TopLeft/XPRow/XPBar
+@onready var level_label: Label = $Root/TopLeft/XPRow/LevelLabel
 
-@onready var pause_panel: Control = %PausePanel
-@onready var resume_btn: Button = %ResumeBtn
-@onready var back_btn: Button = %BackBtn
+@onready var pause_panel: Control = $Root/PausePanel
+@onready var resume_btn: Button = $Root/PausePanel/PauseVBox/ResumeBtn
+@onready var back_btn: Button = $Root/PausePanel/PauseVBox/BackBtn
 
-@onready var game_over_panel: Control = %GameOverPanel
-@onready var game_over_back_btn: Button = %GameOverBackBtn
+@onready var game_over_panel: Control = $Root/GameOverPanel
+@onready var game_over_back_btn: Button = $Root/GameOverPanel/GameOverVBox/GameOverBackBtn
 
-@onready var level_up_panel: Control = %LevelUpPanel
-@onready var choice_btns: Array[Button] = [%Choice1, %Choice2, %Choice3]
+@onready var level_up_panel: Control = $Root/LevelUpPanel
+@onready var choice_btns: Array[Button] = [
+	$Root/LevelUpPanel/LevelUpVBox/Choice1,
+	$Root/LevelUpPanel/LevelUpVBox/Choice2,
+	$Root/LevelUpPanel/LevelUpVBox/Choice3
+]
 
 var _choice_ids: Array[String] = ["", "", ""]
 

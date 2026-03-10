@@ -3,11 +3,11 @@ extends Control
 signal start_pressed
 signal quit_pressed
 
-@onready var _start_btn: Button = %Start
-@onready var _quit_btn: Button = %Quit
-@onready var _panel: PanelContainer = %Panel
-@onready var _title: Label = %Title
-@onready var _subtitle: Label = %Subtitle
+@onready var _start_btn: Button = $Center/Panel/VBox/Start
+@onready var _quit_btn: Button = $Center/Panel/VBox/Quit
+@onready var _panel: PanelContainer = $Center/Panel
+@onready var _title: Label = $Center/Panel/VBox/Title
+@onready var _subtitle: Label = $Center/Panel/VBox/Subtitle
 
 func _ready() -> void:
 	_apply_factory_ui()
