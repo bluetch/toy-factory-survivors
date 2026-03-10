@@ -5,7 +5,7 @@ signal back_to_menu
 @onready var player: CharacterBody2D = $World/Player
 @onready var enemy_manager: Node = $World/EnemyManager
 @onready var camera: Camera2D = $World/Camera2D
-@onready var hud: CanvasItem = $HUD
+@onready var hud: CanvasLayer = $HUD
 
 func _ready() -> void:
 	camera.position = player.position
@@ -48,4 +48,3 @@ func _on_player_xp_changed(xp: int, xp_to_next: int, level: int) -> void:
 func _on_player_level_up(options: Array) -> void:
 	get_tree().paused = true
 	hud.show_level_up(options)
-
