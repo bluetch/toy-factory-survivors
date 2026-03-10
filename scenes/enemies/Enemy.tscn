@@ -3,10 +3,10 @@
 [ext_resource type="Script" path="res://scripts/enemies/enemy.gd" id="1"]
 [ext_resource type="Script" path="res://scripts/ui/world_hp_bar.gd" id="2"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_1"]
+[sub_resource type="CircleShape2D" id=1]
 radius = 10.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_2"]
+[sub_resource type="CircleShape2D" id=2]
 radius = 12.0
 
 [node name="Enemy" type="CharacterBody2D"]
@@ -18,14 +18,14 @@ script = ExtResource("1")
 texture_filter = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_1")
+shape = SubResource(1)
 
 [node name="HitArea" type="Area2D" parent="."]
 collision_layer = 2
 collision_mask = 8
 
 [node name="HitShape" type="CollisionShape2D" parent="HitArea"]
-shape = SubResource("CircleShape2D_2")
+shape = SubResource(2)
 
 [node name="HPBar" type="Node2D" parent="."]
 position = Vector2(0, -26)

@@ -32,9 +32,9 @@ anchor_bottom = 1.0
 
 [node name="Panel" type="PanelContainer" parent="Center"]
 custom_minimum_size = Vector2(560, 340)
-theme_override_styles/panel = SubResource("StyleBoxTexture_1")
+theme_override_styles/panel = SubResource(1)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1"]
+[sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource("3")
 texture_margin_left = 10.0
 texture_margin_top = 10.0

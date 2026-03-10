@@ -152,4 +152,3 @@ func _choose(index: int) -> void:
 	level_up_panel.visible = false
 	upgrade_chosen.emit(id)
 	request_resume.emit()
-
