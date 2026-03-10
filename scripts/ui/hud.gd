@@ -143,9 +143,9 @@ func show_level_up(options: Array) -> void:
 	game_over_panel.visible = false
 	level_up_panel.visible = true
 	for i in range(choice_btns.size()):
-		var opt := options[i]
-		_choice_ids[i] = opt["id"]
-		choice_btns[i].text = "%s\n%s" % [opt["name"], opt["desc"]]
+		var opt: Dictionary = options[i] as Dictionary
+		_choice_ids[i] = str(opt.get("id", ""))
+		choice_btns[i].text = "%s\n%s" % [str(opt.get("name", "")), str(opt.get("desc", ""))]
 
 func _choose(index: int) -> void:
 	var id := _choice_ids[index]
