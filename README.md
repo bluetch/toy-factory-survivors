@@ -1,63 +1,63 @@
 # Toy Factory Survivors
 
-## 介紹 (Introduction)
-歡迎來到《Toy Factory Survivors》！這是一款啟發自《吸血鬼倖存者 (Vampire Survivors)》的自動射擊動作遊戲。在混亂的玩具工廠中，扮演勇敢的角色，面對無窮無盡的玩具敵人浪潮。收集經驗寶石來升級你的能力，解鎖新技能，並生存下來！
+## Introduction
+Welcome to "Toy Factory Survivors"! This is an auto-shooter action game inspired by "Vampire Survivors". Take on the role of a brave character in a chaotic toy factory, facing endless waves of toy enemies. Collect experience gems to upgrade your abilities, unlock new skills, and survive!
 
-## 遊戲特色 (Features)
-- **經典倖存者玩法**: 在不斷湧來的敵人群中生存，考驗你的戰略和反應。
-- **自由移動**: 角色可以在地圖上自由移動，躲避敵人並尋找最佳戰鬥位置。
-- **自動射擊**: 專注於移動和走位，武器會自動攻擊最近的敵人。
-- **豐富的升級系統**: 收集經驗寶石提升等級，從多樣化的升級選項中強化你的角色。
-- **多樣的玩具敵人**: 面對各式各樣具有獨特行為模式的玩具敵人。
-- **自適應視窗**: 遊戲視窗可自由縮放，畫面內容會隨之調整，提供更好的遊戲體驗。
-- **音效系統**: 沉浸於戰鬥音效、升級提示、拾取寶石等音效中（部分音效需自行添加）。
+## Features
+- **Classic Survivor Gameplay**: Survive against ever-growing hordes of enemies, testing your strategy and reflexes.
+- **Free Movement**: Move freely across the map, dodging enemies and finding the best combat positions.
+- **Auto-Shooting**: Focus on movement and positioning; your weapons will automatically target the nearest enemies.
+- **Rich Upgrade System**: Collect experience gems to level up and enhance your character from a diverse selection of upgrade options.
+- **Diverse Toy Enemies**: Face a variety of toy enemies, each with unique behaviors.
+- **Resizable Window**: The game window can be freely resized, and the content will scale accordingly, providing a better gaming experience.
+- **Sound System**: Immerse yourself in battle sound effects, upgrade notifications, gem pickups, and more (some sound files need to be added by the user).
 
-## 使用技術 (Technologies Used)
-- **Godot Engine 4.x**: 開發此遊戲的主要引擎。
-- **GDScript**: Godot 引擎的內建腳本語言，用於遊戲邏輯編程。
+## Technologies Used
+- **Godot Engine 4.x**: The primary engine used for developing this game.
+- **GDScript**: Godot Engine's built-in scripting language, used for game logic programming.
 
-## 如何運行遊戲 (How to Run the Game)
+## How to Run the Game
 
-### 1. 安裝 Godot Engine
-如果尚未安裝 Godot Engine 4.x，請從 [Godot Engine 官方網站](https://godotengine.org/download) 下載並安裝。
+### 1. Install Godot Engine
+If you haven't already, download and install Godot Engine 4.x from the [official Godot Engine website](https://godotengine.org/download).
 
-### 2. 克隆專案
+### 2. Clone the Project
 ```bash
 git clone https://github.com/bluetch/toy-factory-survivors.git
 cd toy-factory-survivors
 ```
 
-### 3. 開啟專案
-啟動 Godot Engine，然後點擊「匯入 (Import)」或「開啟專案 (Open Project)」，選擇您克隆下來的 `toy-factory-survivors` 專案資料夾中的 `project.godot` 文件。
+### 3. Open the Project
+Launch Godot Engine, then click "Import" or "Open Project" and select the `project.godot` file located in the `toy-factory-survivors` project folder you cloned.
 
-### 4. 運行遊戲
-在 Godot 編輯器中，點擊右上角的「運行 (Run)」按鈕（通常是一個播放圖示），即可開始遊戲。
+### 4. Run the Game
+In the Godot editor, click the "Run" button (typically a play icon) in the top right corner to start the game.
 
-## 音效設定 (Sound Setup)
-目前遊戲已建立音效系統，但部分音效文件需要您自行提供。
-1.  **準備音效檔案：**
-    *   為以下事件找到合適的 `.wav` 或 `.ogg` 音效檔案：
-        *   玩家受傷
-        *   敵人死亡
-        *   收集經驗寶石
-        *   玩家升級
-    *   將這些檔案重新命名為：
-        *   `player_hurt.wav` (或 `.ogg`)
-        *   `enemy_death.wav` (或 `.ogg`)
-        *   `pickup.wav` (或 `.ogg`)
-        *   `level_up.wav` (或 `.ogg`)
-2.  **將音效檔案放入專案中：**
-    *   將所有這些重新命名的音效檔案移至 `assets/audio/` 目錄。
-3.  **修改 `scripts/sound_manager.gd`：**
-    *   開啟 `scripts/sound_manager.gd`。
-    *   在 `_ready()` 函式中，新增載入其他音效的程式碼。例如：
+## Sound Setup
+A sound system has been set up in the game, but some audio files need to be provided by you.
+1.  **Prepare your sound files:**
+    *   Find suitable `.wav` or `.ogg` sound files for the following events:
+        *   Player taking damage
+        *   Enemy dying
+        *   Collecting XP gems
+        *   Player leveling up
+    *   Rename these files exactly as follows:
+        *   `player_hurt.wav` (or `.ogg`)
+        *   `enemy_death.wav` (or `.ogg`)
+        *   `pickup.wav` (or `.ogg`)
+        *   `level_up.wav` (or `.ogg`)
+2.  **Place sound files in the project:**
+    *   Move all these renamed sound files into the `assets/audio/` directory within your project.
+3.  **Modify `scripts/sound_manager.gd`:**
+    *   Open `scripts/sound_manager.gd`.
+    *   In the `_ready()` function, add code to load the other sound effects. For example:
         ```gdscript
         player_hurt_stream = load("res://assets/audio/player_hurt.wav")
         enemy_death_stream = load("res://assets/audio/enemy_death.wav")
         pickup_stream = load("res://assets/audio/pickup.wav")
         level_up_stream = load("res://assets/audio/level_up.wav")
         ```
-    *   在 `play_sound()` 函式中的 `match sound_name:` 區塊中，新增對應音效的 `stream` 指派。例如：
+    *   In the `play_sound()` function, within the `match sound_name:` block, add stream assignments for the corresponding sound effects. For example:
         ```gdscript
         match sound_name:
             "shoot":
@@ -72,12 +72,12 @@ cd toy-factory-survivors
                 audio_player.stream = level_up_stream
         ```
 
-## 貢獻 (Contributing)
-歡迎所有形式的貢獻！如果您有任何建議、錯誤報告或功能請求，請隨時提交 Issue 或 Pull Request。
+## Contributing
+Contributions in all forms are welcome! If you have any suggestions, bug reports, or feature requests, feel free to submit an Issue or Pull Request.
 
-## 授權 (License)
-[請在此處填寫您的授權資訊，例如 MIT 授權、GPL 等]
+## License
+[Please fill in your license information here, e.g., MIT License, GPL, etc.]
 
-## 鳴謝 (Acknowledgements)
-- 啟發自《吸血鬼倖存者 (Vampire Survivors)》。
-- [您可以在此處添加其他您想要鳴謝的資源或個人。]
+## Acknowledgements
+- Inspired by "Vampire Survivors".
+- [You can add other resources or individuals you'd like to acknowledge here.]
