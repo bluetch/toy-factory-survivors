@@ -59,6 +59,7 @@ func take_damage(amount: float) -> void:
 		_die()
 
 func _die() -> void:
+	SoundManager.play_sound("enemy_death")
 	_dead = true
 	_spawn_gem()
 	queue_free()

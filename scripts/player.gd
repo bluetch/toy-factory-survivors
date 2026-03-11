@@ -85,6 +85,7 @@ func _try_take_contact_damage() -> void:
 	_take_damage(total)
 
 func _take_damage(amount: float) -> void:
+	SoundManager.play_sound("player_hurt")
 	hp = maxf(0.0, hp - amount)
 	emit_stats()
 	if hp <= 0.0:
@@ -103,6 +104,7 @@ func add_xp(amount: int) -> void:
 	while xp >= xp_to_next:
 		xp -= xp_to_next
 		level += 1
+		SoundManager.play_sound("level_up")
 		xp_to_next = int(round(xp_to_next * 1.25 + 6))
 		emit_xp()
 		level_up.emit(_roll_upgrades())
@@ -151,6 +153,7 @@ func _update_shoot_timer() -> void:
 	shoot_timer.wait_time = interval
 
 func _try_shoot() -> void:
+	SoundManager.play_sound("shoot")
 	var target := _nearest_enemy()
 	if target == null:
 		return
@@ -175,4 +178,3 @@ func _nearest_enemy() -> Node2D:
 			best = d
 			nearest = e
 	return nearest
-

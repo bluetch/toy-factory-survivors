@@ -51,4 +51,3 @@ func _apply_factory_ui() -> void:
 	
 	_title.add_theme_color_override("font_color", Color("#FBBF24"))
 	_subtitle.add_theme_color_override("font_color", Color("#C7D2FE"))
-

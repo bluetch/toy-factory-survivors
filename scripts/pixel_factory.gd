@@ -144,4 +144,3 @@ func _draw_gem(img: Image, c: Color) -> void:
 	_rect(img, 6, 5, 4, 7, c)
 	_rect(img, 7, 12, 2, 1, c.darkened(0.25))
 	_outline(img, 6, 5, 4, 7, c.darkened(0.35))
-

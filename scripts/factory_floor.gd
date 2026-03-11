@@ -35,19 +35,19 @@ func _draw() -> void:
 			draw_rect(Rect2(pos - Vector2(ts * 0.5, ts * 0.5), Vector2(ts, 1)), _c_grid, true)
 			draw_rect(Rect2(pos - Vector2(ts * 0.5, ts * 0.5), Vector2(1, ts)), _c_grid, true)
 	
-	# hazard stripes band
-	var band_h := ts * 2.0
-	var band := Rect2(Vector2(-size_px.x * 0.5, -band_h * 0.5), Vector2(size_px.x, band_h))
-	draw_rect(band, Color(0, 0, 0, 0.0), true)
-	var stripe_w := ts * 0.6
-	var i := int(size_px.x / stripe_w) + 4
-	for n in range(-i, i):
-		var x0 := n * stripe_w
-		var c2 := _c_stripe_y if (n & 1) == 0 else _c_stripe_k
-		# diagonal stripe as a skewed quad using 2 triangles
-		var a := Vector2(x0, -band_h * 0.5)
-		var b := Vector2(x0 + stripe_w, -band_h * 0.5)
-		var c := Vector2(x0 + stripe_w * 1.3, band_h * 0.5)
-		var d := Vector2(x0 + stripe_w * 0.3, band_h * 0.5)
-		draw_colored_polygon(PackedVector2Array([a, b, c, d]), c2)
+	# # hazard stripes band
+	# var band_h := ts * 2.0
+	# var band := Rect2(Vector2(-size_px.x * 0.5, -band_h * 0.5), Vector2(size_px.x, band_h))
+	# draw_rect(band, Color(0, 0, 0, 0.0), true)
+	# var stripe_w := ts * 0.6
+	# var i := int(size_px.x / stripe_w) + 4
+	# for n in range(-i, i):
+	# 	var x0 := n * stripe_w
+	# 	var c2 := _c_stripe_y if (n & 1) == 0 else _c_stripe_k
+	# 	# diagonal stripe as a skewed quad using 2 triangles
+	# 	var a := Vector2(x0, -band_h * 0.5)
+	# 	var b := Vector2(x0 + stripe_w, -band_h * 0.5)
+	# 	var c := Vector2(x0 + stripe_w * 1.3, band_h * 0.5)
+	# 	var d := Vector2(x0 + stripe_w * 0.3, band_h * 0.5)
+	# 	draw_colored_polygon(PackedVector2Array([a, b, c, d]), c2)
 

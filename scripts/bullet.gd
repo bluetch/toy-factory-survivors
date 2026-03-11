@@ -26,4 +26,3 @@ func _on_body_entered(body: Node) -> void:
 	if body.is_in_group("enemies") and body.has_method("take_damage"):
 		body.take_damage(_damage)
 	queue_free()
-

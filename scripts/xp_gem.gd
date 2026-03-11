@@ -10,6 +10,7 @@ func _ready() -> void:
 	sprite.scale = Vector2(3, 3)
 
 func collect(player: Node) -> void:
+	SoundManager.play_sound("pickup")
 	if player != null and player.has_method("add_xp"):
 		player.add_xp(amount)
 	queue_free()

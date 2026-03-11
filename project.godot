@@ -22,6 +22,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 PixelFactory="*res://scripts/pixel_factory.gd"
+SoundManager="*res://scenes/SoundManager.tscn"
 
 [display]
 
@@ -43,7 +44,8 @@ move_left={
 "keycode": 16777231,
 "modifiers": 0,
 "physical_keycode": 16777231
-}]
+}, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":65,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
 }
 move_right={
 "deadzone": 0.5,
@@ -57,7 +59,8 @@ move_right={
 "keycode": 16777233,
 "modifiers": 0,
 "physical_keycode": 16777233
-}]
+}, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":68,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
 }
 move_up={
 "deadzone": 0.5,
@@ -71,7 +74,8 @@ move_up={
 "keycode": 16777232,
 "modifiers": 0,
 "physical_keycode": 16777232
-}]
+}, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":87,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
 }
 move_down={
 "deadzone": 0.5,
@@ -85,7 +89,8 @@ move_down={
 "keycode": 16777234,
 "modifiers": 0,
 "physical_keycode": 16777234
-}]
+}, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":83,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
 }
 pause={
 "deadzone": 0.5,

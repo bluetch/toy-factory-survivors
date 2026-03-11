@@ -32,4 +32,3 @@ func _on_back_to_menu() -> void:
 
 func _on_quit_pressed() -> void:
 	get_tree().quit()
-
